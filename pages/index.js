@@ -6,15 +6,11 @@ function CompA() {
 function Home() {
   const [value, setValue] = useState(10)
 
-  const changeValue = (incrementor) => {
-    setValue(value + incrementor)
-  }
-
   return (
     <>
       current Value: <h1>{value}</h1>
-      <button onClick={() => changeValue(+1)}>+</button>
-      <button onClick={() => changeValue(-1)}>-</button>
+      <button onClick={() => setValue(value + 1)}>+</button>
+      <button onClick={() => setValue(value - 1)}>-</button>
       <CompA />
     </>
   )
