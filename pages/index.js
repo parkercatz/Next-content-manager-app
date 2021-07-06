@@ -1,6 +1,11 @@
 import { useState } from 'react'
-function CompA() {
-  return <h1>CompA</h1>
+function CompA({ prop01 }) {
+  return (
+    <>
+      <h1>CompA</h1>
+      <div>Prop01: {prop01}</div>
+    </>
+  )
 }
 
 function Home() {
@@ -11,7 +16,7 @@ function Home() {
       current Value: <h1>{value}</h1>
       <button onClick={() => setValue(value + 1)}>+</button>
       <button onClick={() => setValue(value - 1)}>-</button>
-      <CompA />
+      <CompA prop01={value} />
     </>
   )
 }
