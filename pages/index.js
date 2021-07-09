@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 function CompA({ prop01 }) {
   return (
     <>
@@ -10,6 +10,10 @@ function CompA({ prop01 }) {
 
 function Home() {
   const [value, setValue] = useState(10)
+
+  useEffect(() => {
+    console.log('use effect')
+  }, [])
 
   return (
     <>
