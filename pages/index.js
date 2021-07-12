@@ -1,4 +1,4 @@
-import Navbar from 'components/Navbar'
+import Layout from 'components/Layout'
 import ResourceHighlight from 'components/ResourceHighlight'
 import NewsLetter from 'components/NewsLetter'
 import ResourceList from 'components/ResourceList'
@@ -6,13 +6,12 @@ import Footer from 'components/Footer'
 
 function Home() {
   return (
-    <>
-      <Navbar />
+    <Layout>
       <ResourceHighlight />
       <NewsLetter />
       <ResourceList />
       <Footer />
-    </>
+    </Layout>
   )
 }
 

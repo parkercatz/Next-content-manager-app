@@ -1,11 +1,10 @@
-import Navbar from 'components/Navbar'
+import Layout from 'components/Layout'
 
 function About() {
   return (
-    <>
-      <Navbar />
+    <Layout>
       <h1>I am about page</h1>
-    </>
+    </Layout>
   )
 }
 
