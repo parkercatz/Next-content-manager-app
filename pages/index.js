@@ -9,9 +9,10 @@ import { resources } from 'pages/api/data'
 function Home() {
   return (
     <Layout>
-      <ResourceHighlight />
+      <ResourceHighlight resources={resources} />
       <NewsLetter />
-      <ResourceList />
+      <ResourceList resources={resources} />
+
       {JSON.stringify(resources)}
       <Footer />
     </Layout>
