@@ -4,7 +4,7 @@ import NewsLetter from 'components/NewsLetter'
 import ResourceList from 'components/ResourceList'
 import Footer from 'components/Footer'
 
-import { resources } from 'pages/api/data'
+import { resources } from 'api/data'
 
 function Home() {
   return (
