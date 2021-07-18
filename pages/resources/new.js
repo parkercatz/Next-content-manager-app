@@ -1,6 +1,16 @@
 import Layout from 'components/Layout'
+import { useState } from 'react'
+
+const DEFAULT_DATA = {
+  title: '',
+  description: '',
+  link: '',
+  priority: '',
+  timeToFinish: '',
+}
 
 const ResourceCreate = () => {
+  const [form, setForm] = useState(DEFAULT_DATA)
   return (
     <Layout>
       <div className="container">
@@ -13,6 +23,7 @@ const ResourceCreate = () => {
                   <label className="label">Name</label>
                   <div className="control">
                     <input
+                      value={form.title}
                       className="input"
                       type="text"
                       placeholder="Learn Next JS and Sanity IO"
@@ -23,6 +34,7 @@ const ResourceCreate = () => {
                   <label className="label">Description</label>
                   <div class="control">
                     <textarea
+                      value={form.description}
                       class="textarea"
                       placeholder="Textarea"
                       placeholder="Learn these technologies because they are very popular and enable better SEO"
@@ -33,6 +45,7 @@ const ResourceCreate = () => {
                   <label className="label">Link</label>
                   <div className="control">
                     <input
+                      value={form.link}
                       className="input"
                       type="text"
                       placeholder="https://academy.eincode.com"
@@ -43,7 +56,7 @@ const ResourceCreate = () => {
                   <label className="label">Priority</label>
                   <div className="control">
                     <div className="select">
-                      <select>
+                      <select value={form.priority}>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -55,20 +68,20 @@ const ResourceCreate = () => {
                   <label className="label">TimeToFinish</label>
                   <div className="control">
                     <input
+                      value={form.timeToFinish}
                       className="input"
                       type="text"
-                      placeholder="60 (Time is in minutes)"
+                      placeholder="60"
                     />
+                    <p className="help">Time is in minutes</p>
                   </div>
-                  <div className="field is-grouped">
-                    <div className="control">
-                      <button className="button is-link">Submit</button>
-                    </div>
-                    <div className="control">
-                      <button className="button is-link is-light">
-                        Cancel
-                      </button>
-                    </div>
+                </div>
+                <div className="field is-grouped">
+                  <div className="control">
+                    <button className="button is-link">Submit</button>
+                  </div>
+                  <div className="control">
+                    <button className="button is-link is-light">Cancel</button>
                   </div>
                 </div>
               </form>
