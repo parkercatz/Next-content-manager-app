@@ -39,12 +39,12 @@ const ResourceCreate = () => {
                     />
                   </div>
                 </div>
-                <div class="field">
+                <div className="field">
                   <label className="label">Description</label>
-                  <div class="control">
+                  <div className="control">
                     <textarea
                       value={form.description}
-                      class="textarea"
+                      className="textarea"
                       placeholder="Textarea"
                       placeholder="Learn these technologies because they are very popular and enable better SEO"
                     ></textarea>
