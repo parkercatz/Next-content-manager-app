@@ -23,15 +23,23 @@ const ResourceDetail = ({ resource }) => {
   )
 }
 
-// ResourceDetail.getInitialProps = async ({ query }) => {
-//   const dataRes = await fetch(`http://localhost:3001/api/resources/${query.id}`)
-//   const data = await dataRes.json()
-//   return {
-//     resource: data,
-//   }
-// }
+export async function getStaticPaths() {
+  const resData = await fetch('http://localhost:3001/api/resources')
+  const data = await resData.json()
+  const paths = data.map((resource) => {
+    return {
+      params: { id: resource.id },
+    }
+  })
 
-export async function getServerSideProps({ params }) {
+  return {
+    paths,
+    // means that other routes should resolve into 404 page
+    fallback: false,
+  }
+}
+
+export async function getStaticProps({ params }) {
   const dataRes = await fetch(
     `http://localhost:3001/api/resources/${params.id}`
   )
