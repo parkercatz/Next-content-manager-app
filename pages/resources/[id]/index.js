@@ -3,7 +3,7 @@ import Link from 'next/link'
 const ResourceDetail = ({ resource }) => {
   return (
     <Layout>
-      <section className="hero ">
+      <section className="hero">
         <div className="hero-body">
           <div className="container">
             <section className="section">
